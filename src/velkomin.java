@@ -1,4 +1,7 @@
-package PACKAGE_NAME;
-
-public class velkomin {
+public class velkomin
+{
+    public static void main(String[] args)
+    {
+        System.out.println("VELKOMIN!");
+    }
 }
