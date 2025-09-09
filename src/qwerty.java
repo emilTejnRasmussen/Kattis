@@ -12,7 +12,8 @@ public class qwerty
         List<String> letters = new ArrayList<>(Arrays.asList(sc.nextLine().split("")));
         StringBuilder message = new StringBuilder();
 
-        for (String letter: letters){
+        for (String letter : letters)
+        {
             message.append(getLetter(letter));
         }
         System.out.println(message);
@@ -20,8 +21,8 @@ public class qwerty
 
     private static String getLetter(String letter)
     {
-
-        return switch (letter){
+        return switch (letter)
+        {
             case " " -> " ";
             case "a" -> "q";
             case "b" -> "w";
