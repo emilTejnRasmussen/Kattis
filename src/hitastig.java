@@ -1,18 +1,19 @@
-import java.util.Arrays;
-import java.util.List;
 import java.util.Scanner;
 
 public class hitastig {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Integer.parseInt(sc.nextLine());
-        List<String> nums =  Arrays.stream(sc.nextLine().split(" ")).toList();
 
-        int max = nums.stream().mapToInt(Integer::parseInt)
-                .max().orElseThrow();
-        int min = nums.stream().mapToInt(Integer::parseInt)
-                .min().orElseThrow();;
+        int n = sc.nextInt();
+        long max = Integer.MIN_VALUE;
+        long min = Integer.MAX_VALUE;
 
-        System.out.printf("%d %d", max, min);
+        for (int i = 0; i < n; i++) {
+            long num = sc.nextLong();
+            if (num > max) max = num;
+            if (num < min) min = num;
+        }
+
+        System.out.println(max + " " + min);
     }
 }
